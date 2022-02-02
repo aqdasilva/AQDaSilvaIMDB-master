@@ -8,6 +8,8 @@ Anthony Quinn DaSilva
 Requirements: -python 3.9 
 Install packages : import requests // import secrets // import json // import pandas
 
-You can either run the TOP250.PY, userRatings.py, searchTitles.py individually or run main.py for all.
+run searchTitle.py to find "wheel of time"
+run top250.py to find the top250 shows
+run userRatings.py to find ratings for 1, 50, 100, 200 tv show ratings
 
 loc 1-4 you must replace {secrets.secret_key} with your own personal api key.
