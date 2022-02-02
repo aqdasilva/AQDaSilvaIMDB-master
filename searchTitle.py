@@ -1,6 +1,7 @@
 import requests
 import secrets
 import json
+import pandas as pd
 
 
 
@@ -17,8 +18,13 @@ def main():
     with open('wheelOfTime.json', 'w') as outfile:
         outfile.write(json_objects)
 
+def jsonTOText():
+    df = pd.read_json(r'wheelOfTime.json')
+    df.to_csv (r'moviesFiles.txt', index=False)
+
 
 class searchTitles:
     # Press the green button in the gutter to run the script.
     if __name__ == '__main__':
         main()
+        jsonTOText()

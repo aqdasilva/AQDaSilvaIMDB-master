@@ -1,6 +1,7 @@
 import requests
 import secrets
 import json
+import pandas as pd
 
 
 def main():
@@ -44,8 +45,14 @@ def main():
     with open('ratings.json', 'w') as outfile:
         outfile.write(json_objects)
 
+def jsonTOText():
+    df = pd.read_json(r'ratings.json')
+    df.to_csv (r'ratings.txt', index=False)
+
+
 
 class ratings:
     # Press the green button in the gutter to run the script.
     if __name__ == '__main__':
         main()
+        jsonTOText()

@@ -1,6 +1,7 @@
 import requests
 import secrets
 import json
+import pandas as pd
 
 
 def main():
@@ -31,14 +32,8 @@ def toTextFile():
         json_file.close()
 
 def jsonTOText():
-    lines = [0, 49, 99, 199]
-    i = 0
-    with open("data.json", "r") as input:
-        with open("top250.txt", "w") as output:
-            for line in input:
-                if i in lines:
-                    output.write(line)
-                i += 1
+    df = pd.read_json(r'data.json')
+    df.to_csv (r'top250.txt', index=False)
 
 
 class topTVs:
