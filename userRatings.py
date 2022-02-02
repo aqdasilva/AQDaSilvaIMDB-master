@@ -42,11 +42,11 @@ def main():
     data = (data1, data2, data3, data4)
 
     json_objects = json.dumps(data, indent=4)
-    with open('ratings.json', 'w') as outfile:
+    with open('json/ratings.json', 'w') as outfile:
         outfile.write(json_objects)
 
 def jsonTOText():
-    df = pd.read_json(r'ratings.json')
+    df = pd.read_json(r'json/ratings.json')
     df.to_csv (r'ratings.txt', index=False)
 
 

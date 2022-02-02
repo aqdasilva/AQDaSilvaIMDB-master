@@ -43,15 +43,15 @@ for index in range(0, len(shows)):
     list.append(data)
 
 for show in list:
-    f = open('top250.txt', 'a')
+    f = open('txt files/top250.txt', 'a')
     print(show['place'], '-', show['Shows Name'], '(' + show['year'] +
           ') -', 'Starring:', show['Casting Group'], show['rating'], file=f)
 
 
 lines = [0, 49, 99, 199]
 i = 0
-with open("top250.txt", "r") as input:
-    with open("ratings.txt", "w") as output:
+with open("txt files/top250.txt", "r") as input:
+    with open("txt files/ratings.txt", "w") as output:
         for line in input:
             if i in lines:
                 output.write(line)

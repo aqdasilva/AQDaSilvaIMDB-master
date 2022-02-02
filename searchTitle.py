@@ -15,11 +15,11 @@ def main():
     print(data)
 
     json_objects = json.dumps(data, indent=4)
-    with open('wheelOfTime.json', 'w') as outfile:
+    with open('json/wheelOfTime.json', 'w') as outfile:
         outfile.write(json_objects)
 
 def jsonTOText():
-    df = pd.read_json(r'wheelOfTime.json')
+    df = pd.read_json(r'json/wheelOfTime.json')
     df.to_csv (r'moviesFiles.txt', index=False)
 
 
