@@ -1,5 +1,3 @@
-import secrets
-#this is all my super secret api keys
 
 
 secret_key = "k_09bvlwau"

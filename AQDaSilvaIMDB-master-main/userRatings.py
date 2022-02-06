@@ -5,10 +5,10 @@ import pandas as pd
 
 
 def main():
-    loc = f"https://imdb-api.com/en/API/UserRatings/{secrets.secret_key}/tt5491994"  # 1
-    loc2 = f"https://imdb-api.com/en/API/UserRatings/{secrets.secret_key}/tt0081834"  # 50
-    loc3 = f"https://imdb-api.com/en/API/UserRatings/{secrets.secret_key}/tt0096697"  # 100
-    loc4 = f"https://imdb-api.com/en/API/UserRatings/{secrets.secret_key}/tt2100976"  # 200
+    loc = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/tt5491994"  # 1
+    loc2 = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/tt0081834"  # 50
+    loc3 = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/tt0096697"  # 100
+    loc4 = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/tt2100976"  # 200
 
     results = requests.get(loc)
     results2 = requests.get(loc2)
@@ -45,7 +45,7 @@ def main():
     with open('json/ratings.json', 'w') as outfile:
         outfile.write(json_objects)
 
-def jsonTOText():
+def toTextFile():
     df = pd.read_json(r'json/ratings.json')
     df.to_csv (r'ratings.txt', index=False)
 
@@ -55,4 +55,5 @@ class ratings:
     # Press the green button in the gutter to run the script.
     if __name__ == '__main__':
         main()
-        jsonTOText()
+        toTextFile()
+

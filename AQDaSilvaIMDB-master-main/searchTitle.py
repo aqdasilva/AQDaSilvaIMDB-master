@@ -6,7 +6,7 @@ import pandas as pd
 
 
 def main():
-    loc = f"https://imdb-api.com/en/API/UserRatings/{secrets.secret_key}/tt0331080"
+    loc = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/tt0331080"
     results = requests.get(loc)
     if results.status_code != 200:
         print("help!")

@@ -2,12 +2,14 @@ import requests
 import secrets
 import json
 import pandas as pd
+import sqlite3
+import sys
 
 
 def main():
-    loc = f"https://imdb-api.com/en/API/Top250TVs/{secrets.secret_key}"
-    loc2 = f"https://imdb-api.com/api#UserRatings-header"
+    loc = f"https://imdb-api.com/en/API/Top250TVs/k_09bvlwau"
     results = requests.get(loc)
+
     if results.status_code != 200:
         print("help!")
         return
@@ -34,7 +36,6 @@ def toTextFile():
 def jsonTOText():
     df = pd.read_json(r'json/data.json')
     df.to_csv (r'top250.txt', index=False)
-
 
 class topTVs:
     # Press the green button in the gutter to run the script.
