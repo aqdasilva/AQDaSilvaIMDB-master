@@ -6,8 +6,8 @@ import userRatings
 import top250
 import searchTitle
 
-class main:
-    if __name__ == '__main__':
-        userRatings()
-        top250()
-        searchTitle()
+
+if __name__ == '__main__':
+    userRatings.main()
+    top250.main()
+    searchTitle.main()
