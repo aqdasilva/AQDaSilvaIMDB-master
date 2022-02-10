@@ -14,7 +14,7 @@ cursor = db.cursor()
 
 
 def get_top_250_data() -> list[dict]:
-    api_query = f"https://imdb-api.com/en/API/Top250TVs/{secrets.secret_key}"
+    api_query = f"https://imdb-api.com/en/API/Top250TVs/k_09bvlwau"
     response = requests.get(api_query)
     if response.status_code != 200:  # if we don't get an ok response we have trouble
         print(f"Failed to get data, response code:{response.status_code} and error message: {response.reason} ")
@@ -25,7 +25,7 @@ def get_top_250_data() -> list[dict]:
     return show_list
 
 
-filename = "Output.txt"
+filename = "showData.sqlite"
 
 
 # def remove_punc(string):
@@ -57,7 +57,7 @@ def report_results(data_to_write: list[dict]):
 def get_ratings(top_show_data: list[dict]) -> list[dict]:
     results = []
     api_queries = []
-    base_query = f"https://imdb-api.com/en/API/UserRatings/{secrets.secret_key}/"
+    base_query = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/"
     wheel_of_time_query = f"{base_query}tt7462410"
     api_queries.append(wheel_of_time_query)
     first_query = f"{base_query}{top_show_data[0]['id']}"
@@ -101,19 +101,38 @@ def setup_db(cursor: sqlite3.Cursor):
  );''')
 
     cursor.execute('''CREATE TABLE IF NOT EXISTS userRatings(
-imdbId INTEGER PRIMARY KEY,
-totalRating INTEGER,
-totalRatingVotes INTEGER,
-TenRating INTEGER,
-TenRatingVotes INTEGER 
+imdbid INTEGER NOT NULL,
+totalRating TEXT,
+totalRatingVotes TEXT,
+TenRating_Perc FLOAT NOT NULL,
+TenRatingVotes INTEGER NOT NULL,
+NineRating_perc FLOAT NOT NULL,
+NineRatingVotes INTEGER NOT NULL,
+EightRating_perc FLOAT NOT NULL,
+EightRatingVotes INTEGER NOT NULL,
+SevenRating_perc FLOAT NOT NULL,
+SevenRatingVotes INTEGER NOT NULL,
+SixRating_perc FLOAT NOT NULL,
+SixRatingVotes INTEGER NOT NULL,
+FiveRating_perc FLOAT NOT NULL,
+FiveRatingVotes INTEGER NOT NULL,
+FourRating_perc FLOAT NOT NULL,
+FourRatingVotes INTEGER NOT NULL,
+ThreeRating_perc FLOAT NOT NULL,
+ThreeRatingVotes INTEGER NOT NULL,
+TwoRating_Perc FLOAT NOT NULL,
+TwoRatingVotes INTEGER NOT NULL,
+OneRating_perc FLOAT NOT NULL,
+OneRatingVotes INTEGER NOT NULL,
+FOREIGN KEY (imdbid) REFERENCES showRatings(id) 
  );''')
 
 
-cursor.execute('''DROPS TABLE if showRatings''')
+#cursor.execute('''DROPS TABLE if showRatings''')
 
 
 def insert_data(cursor: sqlite3.Cursor):
-    loc = f"https://imdb-api.com/en/API/Top250TVs/{secrets.secret_key}"
+    loc = f"https://imdb-api.com/en/API/Top250TVs/k_09bvlwau"
     results = requests.get(loc)
     data = results.json()
     conn = sqlite3.connect('showData.sqlite')
@@ -130,20 +149,6 @@ def insert_data(cursor: sqlite3.Cursor):
     conn.commit()
     conn.close()
 
-#pytest: cmd line => python -m pytest tests/*
-#def test_add():
-#    result = main.add_it_up(5,6)
-#    assert result == 11
-
-#def test_distance():
-##    result = main.find_distance((0,3), (4,0))
-#    assert result == 5
-#    result2 = main.find_distance((0,0), (6,5))
-#    assert result2 == pytest.approx(7.34242323242, 0.00000001)
-#    result3 = main.find_distance((-3, -5), (-3, -5))
-#    assert result3 == 0 #or reuslt3
-
-
 
 
 
@@ -151,7 +156,8 @@ def insert_data(cursor: sqlite3.Cursor):
 def main():
     conn, cursor = open_dbase("showData.sqlite")
     print(type(conn))
-    close_db(conn)
+
+    #open_dbase(conn)
     setup_db(conn)
     insert_data(conn)
     top_show_data = get_top_250_data()
@@ -160,6 +166,7 @@ def main():
     report_results(ratings_data)
     report_results(top_show_data)
 
+    close_db(conn)
 
 if __name__ == '__main__':
     main() in ()
