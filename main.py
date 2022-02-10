@@ -1,3 +1,5 @@
+import pytest
+
 import json
 import sqlite3
 import sys
@@ -7,8 +9,7 @@ import secrets
 import urllib.request
 from os import path
 
-
-db = sqlite3.connect('showData.db')
+db = sqlite3.connect('showData.sqlite')
 cursor = db.cursor()
 
 
@@ -27,22 +28,22 @@ def get_top_250_data() -> list[dict]:
 filename = "Output.txt"
 
 
-#def remove_punc(string):
+# def remove_punc(string):
 #   punc = '''!()-[]{};:'"\, <>./?@#$%^&*_~'''
- #   for ele in string:
-  #      if ele in punc:
-   #         string = string.replace(ele, "")
-   # return string
+#   for ele in string:
+#      if ele in punc:
+#         string = string.replace(ele, "")
+# return string
 
 
-#try:
- #   with open(filename, 'r', encoding="utf-8") as f:
-  #      data = f.read()
-   # with open(filename, "w+", encoding="utf-8") as f:
-    #    f.write(remove_punc(data))
-  #  print("Removed punctuations from the file", filename)
-#except FileNotFoundError:
- #   print("File not found")
+# try:
+#   with open(filename, 'r', encoding="utf-8") as f:
+#      data = f.read()
+# with open(filename, "w+", encoding="utf-8") as f:
+#    f.write(remove_punc(data))
+#  print("Removed punctuations from the file", filename)
+# except FileNotFoundError:
+#   print("File not found")
 
 
 def report_results(data_to_write: list[dict]):
@@ -76,16 +77,19 @@ def get_ratings(top_show_data: list[dict]) -> list[dict]:
         results.append(rating_data)
     return results
 
-def create_dbase(filename:str) ->Tuple[sqlite3.Connection, sqlite3.Cursor]:
-    db_connection = sqlite3.connect(filename)#connect to existing DB or create new one
-    cursor = db_connection.cursor()#get ready to read/write data
+
+def open_dbase(filename: str) -> Tuple[sqlite3.Connection, sqlite3.Cursor]:
+    db_connection = sqlite3.connect(filename)  # connect to existing DB or create new one
+    cursor = db_connection.cursor()  # get ready to read/write data
     return db_connection, cursor
 
-def close_db(connection:sqlite3.Connection):
-    connection.commit()#make sure any changes get saved
+
+def close_db(connection: sqlite3.Connection):
+    connection.commit()  # make sure any changes get saved
     connection.close()
 
-def setup_db(cursor:sqlite3.Cursor):
+
+def setup_db(cursor: sqlite3.Cursor):
     cursor.execute('''CREATE TABLE IF NOT EXISTS showRatings(
  id INTEGER PRIMARY KEY,
  title TEXT NOT NULL,
@@ -104,27 +108,58 @@ TenRating INTEGER,
 TenRatingVotes INTEGER 
  );''')
 
-#def insert_data(cursor:sqlite3.Cursor):
- #   cursor.execute(f'''INSERT INTO showData(id, title, fulltitle, year, crew)
-  #                  VALUES ('imDbId', 'title', 'fullTitle', 'year', 'crew',{####make function in here})''')
-    
-    
+
+cursor.execute('''DROPS TABLE if showRatings''')
+
+
+def insert_data(cursor: sqlite3.Cursor):
+    loc = f"https://imdb-api.com/en/API/Top250TVs/{secrets.secret_key}"
+    results = requests.get(loc)
+    data = results.json()
+    conn = sqlite3.connect('showData.sqlite')
+    conn.cursor()
+    for i in range(0, 250):
+        cursor.execute(f'''INSERT INTO showRatings(id, title, fulltitle, year, crew, imDbRating, imdbRatingCount)
+                 VALUES (?,?,?,?,?,?,?)''',
+                       (data['items'][i]['id'], data['items'][i]['title'], data['items'][i]['fullTitle'],
+                        data['items'][i]['year'], data['items'][i]['crew'], data['items'][i]['imDbRating'],
+                        data['items'][i]['imDbRatingCount']))
+
+    cursor.execute('SELECT * FROM showRatings')
+
+    conn.commit()
+    conn.close()
+
+#pytest: cmd line => python -m pytest tests/*
+def test_add():
+    result = main.add_it_up(5,6)
+    assert result == 11
+
+def test_distance():
+    result = main.find_distance((0,3), (4,0))
+    assert result == 5
+    result2 = main.find_distance((0,0), (6,5))
+    assert result2 == pytest.approx(7.34242323242, 0.00000001)
+    result3 = main.find_distance((-3, -5), (-3, -5))
+    assert result3 == 0 #or reuslt3
+
 
 
 
 
 
 def main():
-    conn, cursor = create_dbase("showData.sqlite")
+    conn, cursor = open_dbase("showData.sqlite")
     print(type(conn))
-   #close_db(conn)
+    close_db(conn)
     setup_db(conn)
-
+    insert_data(conn)
     top_show_data = get_top_250_data()
     ratings_data = get_ratings(top_show_data)
-   # remove_punc(filename)
+    # remove_punc(filename)
     report_results(ratings_data)
     report_results(top_show_data)
+
 
 if __name__ == '__main__':
     main() in ()
