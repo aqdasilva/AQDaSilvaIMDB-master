@@ -58,7 +58,7 @@ def get_ratings(top_show_data: list[dict]) -> list[dict]:
     results = []
     api_queries = []
     base_query = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/"
-    wheel_of_time_query = f"{base_query}tt7462410"
+    wheel_of_time_query = f"{base_query}z"
     api_queries.append(wheel_of_time_query)
     first_query = f"{base_query}{top_show_data[0]['id']}"
     api_queries.append(first_query)
@@ -145,10 +145,30 @@ def insert_data(cursor: sqlite3.Cursor):
                         data['items'][i]['imDbRatingCount']))
 
     cursor.execute('SELECT * FROM showRatings')
-
     conn.commit()
     conn.close()
 
+def insert_data_table_two(cursor: sqlite3.Cursor):
+    loc1 = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/tt5491994"
+    loc2 = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/tt0081834"
+    loc3 = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/tt0096697"
+    loc4 = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/tt2100976"
+    wheel_loc = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/tt7462410"
+    results = requests.get(loc1, loc2, loc3, loc4, wheel_loc)
+    data = results.json()
+    conn = sqlite3.connect('showData.sqlite')
+    conn.cursor()
+    for i in data:
+        cursor.execute(f'''INSERT INTO userRatings(imdbid,
+totalRating,totalRatingVotes,TenRating_Perc,TenRatingVotes,NineRating_perc,NineRatingVotes,EightRating_perc,EightRatingVotes,
+SevenRating_perc,SevenRatingVotes,SixRating_perc,SixRatingVotes,FiveRating_perc,FiveRatingVotes,FourRating_perc,FourRatingVotes,
+ThreeRating_perc,ThreeRatingVotes,TwoRating_Perc,TwoRatingVotes ,OneRating_perc,OneRatingVotes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''',
+        (data['imDbId'][i]['imdbid'], data['imDbId'][i]['totalRating'], data['imDbId'][i]['totalRatingVotes'], data['imDbId'][i]['TenRating_Perc'], data['imDbId'][i]['TenRatingVotes'], data['imDbId'][i]['NineRating_perc'], data['imDbId'][i]['NineRatingVotes'], data['imDbId'][i]['EightRating_perc'],
+        data['imDbId'][i]['EightRatingVotes'], data['imDbId'][i]['SevenRating_perc'], data['imDbId'][i]['SevenRatingVotes'], data['imDbId'][i]['SixRating_perc'],data['imDbId'][i]['SixRatingVotes'], data['imDbId'][i]['FiveRating_perc'], data['imDbId'][i]['FiveRatingVotes'], data['imDbId'][i]['FourRating_perc'], data['imDbId'][i]['FourRatingVotes'],
+        data['imDbId'][i]['FourRating_perc'], data['imDbId'][i]['FourRatingVotes'], data['imDbId'][i]['ThreeRating_perc'], data['imDbId'][i]['ThreeRatingVotes'], data['imDbId'][i]['TwoRating_Perc'], data['imDbId'][i]['TwoRatingVotes'],data['imDbId'][i]['OneRatingVotes'], data['imDbId'][i]['OneRatingVotes']))
+    cursor.execute('SELECT * FROM userRatings')
+    conn.commit()
+    conn.close()
 
 
 
@@ -156,10 +176,9 @@ def insert_data(cursor: sqlite3.Cursor):
 def main():
     conn, cursor = open_dbase("showData.sqlite")
     print(type(conn))
-
-    #open_dbase(conn)
     setup_db(conn)
     insert_data(conn)
+    insert_data_table_two(conn)
     top_show_data = get_top_250_data()
     ratings_data = get_ratings(top_show_data)
     # remove_punc(filename)
