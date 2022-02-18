@@ -3,11 +3,6 @@ import secrets
 import sys
 
 
-
-
-
-
-
 def get_top_250_data() -> list[dict]:
     api_query = f"https://imdb-api.com/en/API/Top250TVs/k_09bvlwau"
     response = requests.get(api_query)
@@ -20,14 +15,11 @@ def get_top_250_data() -> list[dict]:
     return show_list
 
 
-filename = "showData.sqlite"
-
-
 def get_ratings(top_show_data: list[dict]) -> list[dict]:
     results = []
     api_queries = []
     base_query = f"https://imdb-api.com/en/API/UserRatings/k_09bvlwau/"
-    wheel_of_time_query = f"{base_query}z"
+    wheel_of_time_query = f"{base_query}tt7462410"
     api_queries.append(wheel_of_time_query)
     first_query = f"{base_query}{top_show_data[0]['id']}"
     api_queries.append(first_query)
@@ -46,6 +38,60 @@ def get_ratings(top_show_data: list[dict]) -> list[dict]:
         results.append(rating_data)
     return results
 
+
+def get_popular_shows() -> list[dict]:
+    api_query = f"https://imdb-api.com/en/API/MostPopularTVs/k_12345678"
+    response = requests.get(api_query)
+    if response.status_code != 200:  # if we don't get an ok response we have trouble
+        print(f"Failed to get data, response code:{response.status_code} and error message: {response.reason} ")
+        sys.exit(-1)
+    # jsonresponse is a kinda useless dictionary, but the items element has what we need
+    jsonresponse = response.json()
+    popular_list = jsonresponse["items"]
+    return popular_list
+
+def get_top_movies() -> list[dict]:
+    api_query = f"https://imdb-api.com/en/API/Top250Movies/k_09bvlwau"
+    response = requests.get(api_query)
+    if response.status_code != 200:  # if we don't get an ok response we have trouble
+        print(f"Failed to get data, response code:{response.status_code} and error message: {response.reason} ")
+        sys.exit(-1)
+    # jsonresponse is a kinda useless dictionary, but the items element has what we need
+    jsonresponse = response.json()
+    movie_list = jsonresponse["items"]
+    return movie_list
+
+def get_popular_movies(top_show_data: list[dict]) -> list[dict]:
+    results = []
+    api_queries = []
+    base_query = f"https://imdb-api.com/en/API/MostPopularMovies/k_09bvlwau"
+
+    first_query = f"{base_query}{top_show_data[2]['rankUpDown']}"
+    api_queries.append(first_query)
+    second_query = f"{base_query}{top_show_data[2]['rankUpDown']}"
+    api_queries.append(second_query)
+    third_query = f"{base_query}{top_show_data[2]['rankUpDown']}"
+    api_queries.append(third_query)
+
+    first_neg_query = f"{base_query}{top_show_data[2]['rankUpDown']}"
+    api_queries.append(first_neg_query)
+    second_neg_query = f"{base_query}{top_show_data[2]['rankUpDown']}"
+    api_queries.append(second_neg_query)
+    third_neg_query = f"{base_query}{top_show_data[2]['rankUpDown']}"
+    api_queries.append(third_neg_query)
+
+
+
+    for query in api_queries:
+        response = requests.get(query)
+        if response.status_code != 200:  # if we don't get an ok response we have trouble, skip it
+            print(f"Failed to get data, response code:{response.status_code} and error message: {response.reason} ")
+            continue
+        rating_data = response.json()
+        results.append(rating_data)
+    return results
+
+
 def prepare_top_250_data(top_show_data: list[dict]) -> list[tuple]:
     data_for_database = []
     for show_data in top_show_data:
@@ -60,6 +106,61 @@ def prepare_top_250_data(top_show_data: list[dict]) -> list[tuple]:
         show_values = tuple(show_values)
         data_for_database.append(show_values)
     return data_for_database
+
+
+def prepare_popular_shows_for_db(top_popular_data: list[dict]) -> list[tuple]:
+    data_for_database = []
+    for show_data in top_popular_data:
+        show_values = list(show_data.values())  # dict values is now an object that is almost a list, lets make it one
+        # now we have the values, but several of them are strings and I would like them to be numbers
+        # since python 3.7 dictionaries are guaranteed to be in insertion order
+        show_values[1] = int(show_values[1])  # convert rank to int
+        show_values[2] = float(show_values[2]) #convert rankupdown to float
+        show_values[5] = int(show_values[5])  # convert year to int
+        show_values[7] = float(show_values[7])  # convert rating to float
+        show_values[8] = int(show_values[8])  # convert rating count to int
+        # now covert the list of values to a tuple to easy insertion into the database
+        show_values = tuple(show_values)
+        data_for_database.append(show_values)
+    return data_for_database
+
+
+def prepare_top_movies_for_db(top_popular_data: list[dict]) -> list[tuple]:
+    data_for_database = []
+    for show_data in top_popular_data:
+        show_values = list(show_data.values())  # dict values is now an object that is almost a list, lets make it one
+        # now we have the values, but several of them are strings and I would like them to be numbers
+        # since python 3.7 dictionaries are guaranteed to be in insertion order
+        show_values[1] = int(show_values[1])  # convert rank to int
+        show_values[4] = int(show_values[4])  # convert year to int
+        show_values[7] = float(show_values[7])  # convert rating to float
+        show_values[8] = int(show_values[8])  # convert rating count to int
+        # now covert the list of values to a tuple to easy insertion into the database
+        show_values = tuple(show_values)
+        data_for_database.append(show_values)
+    return data_for_database
+
+
+
+
+def prepare_popular_movies_data(top_popular_data: list[dict]) -> list[tuple]:
+    data_for_database = []
+    for show_data in top_popular_data:
+        show_values = list(show_data.values())  # dict values is now an object that is almost a list, lets make it one
+        # now we have the values, but several of them are strings and I would like them to be numbers
+        # since python 3.7 dictionaries are guaranteed to be in insertion order
+        show_values[1] = int(show_values[1])  # convert rank to int
+        show_values[2] = float(show_values[2])  # convert rankupdown to float
+        show_values[4] = int(show_values[4])  # convert year to int
+        show_values[7] = float(show_values[7])  # convert rating to float
+        show_values[8] = int(show_values[8])  # convert rating count to int
+        # now covert the list of values to a tuple to easy insertion into the database
+        show_values = tuple(show_values)
+        data_for_database.append(show_values)
+    return data_for_database
+
+
+
 
 def make_zero_values() -> list[dict]:
     '''this is a kludge to deal with the fact that one record has no ratings data'''
@@ -100,4 +201,9 @@ def prepare_ratings_for_db(ratings: list[dict]) -> list[tuple]:
     return data_for_database
 
 
-
+def prepare_popular_shows_for_db(ratings: list[dict]) -> list[tuple]:
+    data_for_database = []
+    for ratings_entry in ratings:
+        db_redy_entry = _flatten_and_tuplize(ratings_entry)
+        data_for_database.append(db_redy_entry)
+    return data_for_database
