@@ -66,7 +66,15 @@ def test_popular_movies_table(get_db, test_data_entries):
     ### fetches the table for the popular movies with the title and rnakUpDown columns
 
 
-def _write_to_popular_movies():
+def _write_to_popular_movies(get_db, test_data_entries):
+    conn, cursor = get_db
+    dbase.create_change_movies(cursor, test_data_entries)
+    dbase.get_top_3_movies([test_data_entries], cursor)
+    cursor.execute("""SELECT rankUpDown from rankUpDown_table WHERE rankUpDown = 'TEST101'""")
+    results = cursor.fetchall()
+    assert len(results) == 1
+    ### tests the data im taking from popular movies table that gets put into change table
+    
 
 
 
