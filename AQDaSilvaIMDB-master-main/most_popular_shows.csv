@@ -1,0 +1,101 @@
+ttid,rank,rankchange,title,fulltitle,year,image_url,crew,rating,ratingCount
+tt8740976,1,11,Inventing Anna,2022,2022,https://imdb-api.com/images/original/MV5BM2QzMWM5OTgtZDE1MC00ZmMyLWIyODItMmQ4NjNlZGRjYTUzXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio0.6716_AL_.jpg,6.9,23204.0,23204
+tt8772296,2,1,Euphoria,2019,2019,https://imdb-api.com/images/original/MV5BMDMzZDkyNzEtYTY5Ni00NzlhLWI4MzUtY2UzNjNmMjI1YzIzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6716_AL_.jpg,8.4,126463.0,126463
+tt9288030,3,-2,Reacher,2022,2022,https://imdb-api.com/images/original/MV5BNzQ4MGYzYzAtNjJlOC00NTdkLTlmNTAtMmZjMzZmZTg2YTEzXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.6716_AL_.jpg,8.3,64928.0,64928
+tt7631058,4,16,The Lord of the Rings: The Rings of Power,2022,2022,https://imdb-api.com/images/original/MV5BOTUzYTMwYjAtNzMzMS00YjhmLWEwOGQtY2MxZGEyMzMwZDI0XkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.6716_AL_.jpg,0,0.0,0
+tt13146488,5,2,Peacemaker,2022,2022,https://imdb-api.com/images/original/MV5BODk2NjAyOWMtM2FjZC00MjZhLTkxMjQtZTM3NjJlYTE5MDdlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6716_AL_.jpg,8.5,59462.0,59462
+tt13668894,6,-4,The Book of Boba Fett,2021,2021,https://imdb-api.com/images/original/MV5BZjllZjE1MWEtYTJhZC00MWIyLTliMjEtYzM3ODc4YzQ2MjFlXkEyXkFqcGdeQXVyODIyOTEyMzY@._V1_Ratio0.6716_AL_.jpg,7.5,91069.0,91069
+tt13659418,7,-3,Pam & Tommy,2022,2022,https://imdb-api.com/images/original/MV5BMmYyMTE3ZDItOGQwZC00ODgwLTkzN2YtOTIxNTI1Yjg0ZjE0XkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_Ratio0.6716_AL_.jpg,7.4,11566.0,11566
+tt2560140,8,-3,Attack on Titan,2013,2013,https://imdb-api.com/images/original/MV5BNzc5MTczNDQtNDFjNi00ZDU5LWFkNzItOTE1NzQzMzdhNzMxXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_Ratio0.6716_AL_.jpg,9.0,327023.0,327023
+tt13991232,9,0,1883,2021,2021,https://imdb-api.com/images/original/MV5BNDZkZDdkMjYtMGI3Yi00MmVkLTkzZjQtMGI0NGViNzIzNjhjXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_Ratio0.6716_AL_.jpg,9.0,33329.0,33329
+tt5071412,10,-4,Ozark,2017,2017,https://imdb-api.com/images/original/MV5BNGY3MmUzNjktZWEzNi00ODdiLTk4ZDItZjBhMjZlYzI0NTJjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio0.6716_AL_.jpg,8.5,256306.0,256306
+tt12878838,11,161,Bel-Air,2022,2022,https://imdb-api.com/images/original/MV5BZDI5YTcyZDAtNDk1OC00YzFmLTk4ODctZmQyMDk1OGNmNDdlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio0.7313_AL_.jpg,6.0,4480.0,4480
+tt1520211,12,10,The Walking Dead,2010,2010,https://imdb-api.com/images/original/MV5BZmU5NTcwNjktODIwMi00ZmZkLTk4ZWUtYzVjZWQ5ZTZjN2RlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6716_AL_.jpg,8.1,932140.0,932140
+tt4236770,13,1,Yellowstone,2018,2018,https://imdb-api.com/images/original/MV5BZjhkNWM1NTQtODI4NS00NzllLTg1ODAtYjg3N2QxZjc3ZjRiXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_Ratio0.7313_AL_.jpg,8.8,100540.0,100540
+tt4406178,14,2,The Gilded Age,2022,2022,https://imdb-api.com/images/original/MV5BZTcyODBlMjktYzgyMy00YTczLWI3ZDktYmY3Y2JjODE2MzZhXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6716_AL_.jpg,8.1,8903.0,8903
+tt0944947,15,4,Game of Thrones,2011,2011,https://imdb-api.com/images/original/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_Ratio0.7313_AL_.jpg,9.2,1956893.0,1956893
+tt13315324,16,-8,The Woman in the House Across the Street from the Girl in the Window,2022,2022,https://imdb-api.com/images/original/MV5BMzhhNWVmNzItOTFlOC00OTAwLWFmNjgtMDBhOWM2YTkwZDcwXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_Ratio0.6716_AL_.jpg,6.4,31238.0,31238
+tt9335498,17,-2,Demon Slayer: Kimetsu no Yaiba,2019,2019,https://imdb-api.com/images/original/MV5BZjZjNzI5MDctY2Y4YS00NmM4LTljMmItZTFkOTExNGI3ODRhXkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_Ratio0.7015_AL_.jpg,8.7,80878.0,80878
+tt14169960,18,-7,All of Us Are Dead,2022,2022,https://imdb-api.com/images/original/MV5BOTY1ZGM2YzQtMTBjZC00NjE2LWJlNzUtYjA0YjYxNzBjMmRjXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_Ratio0.6716_AL_.jpg,7.6,31513.0,31513
+tt2442560,19,10,Peaky Blinders,2013,2013,https://imdb-api.com/images/original/MV5BMTkzNjEzMDEzMF5BMl5BanBnXkFtZTgwMDI0MjE4MjE@._V1_Ratio0.6716_AL_.jpg,8.8,457650.0,457650
+tt5788792,20,50,The Marvelous Mrs. Maisel,2017,2017,https://imdb-api.com/images/original/MV5BMzk2ZmFhNjMtOWM2YS00MGU4LTk3ODMtY2Q2MjU2ODA0MDg4XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg,8.7,100468.0,100468
+tt11280740,21,243,Severance,2022,2022,https://imdb-api.com/images/original/MV5BZjE2ZWQyNGItYjM2My00MzUyLWIzZDktM2RmNWZhZTU0YmVhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio0.6716_AL_.jpg,8.1,2877.0,2877
+tt0386676,22,3,The Office,2005,2005,https://imdb-api.com/images/original/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_Ratio0.6716_AL_.jpg,8.9,520562.0,520562
+tt9077540,23,-13,Sweet Magnolias,2020,2020,https://imdb-api.com/images/original/MV5BZjBmNTI2ZDEtOThhMy00OTkyLTg5Y2ItMTUxMzU4NWI1MzhhXkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_Ratio0.7015_AL_.jpg,7.4,16074.0,16074
+tt11247158,24,0,The Legend of Vox Machina,2022,2022,https://imdb-api.com/images/original/MV5BNzU0YTMzZTItY2I4Yi00NmJhLTg0N2EtZTdiMWU4ZmNjZDkzXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.6716_AL_.jpg,8.6,12939.0,12939
+tt8111088,25,-7,The Mandalorian,2019,2019,https://imdb-api.com/images/original/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_Ratio0.6716_AL_.jpg,8.8,409526.0,409526
+tt4574334,26,45,Stranger Things,2016,2016,https://imdb-api.com/images/original/MV5BN2ZmYjg1YmItNWQ4OC00YWM0LWE0ZDktYThjOTZiZjhhN2Q2XkEyXkFqcGdeQXVyNjgxNTQ3Mjk@._V1_Ratio0.6716_AL_.jpg,8.7,966605.0,966605
+tt8634332,27,-4,The Righteous Gemstones,2019,2019,https://imdb-api.com/images/original/MV5BNDViYzhjZjItNjBkYS00NjE5LWI1M2ItODhkZGM2NzI4YzE0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6716_AL_.jpg,8.1,25354.0,25354
+tt9170108,28,-7,Raised by Wolves,2020,2020,https://imdb-api.com/images/original/MV5BNzk0ZTZlOGItMjQ0MC00YzYyLWIwYjgtMGM4NDdkOTlhYzIzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6716_AL_.jpg,7.5,66646.0,66646
+tt7660850,29,-2,Succession,2018,2018,https://imdb-api.com/images/original/MV5BZDE0ODVlYjktNjJiMC00ODk4LWIwNTktMWRhZmZiOGFhYmUwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.7910_AL_.jpg,8.8,117917.0,117917
+tt10234724,30,161,Moon Knight,2022,2022,https://imdb-api.com/images/original/MV5BNGM2ZjJmZDQtNTI5MS00ZTI0LTkyNjktM2RlYWY0YTY5MTYzXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio0.6716_AL_.jpg,0,0.0,0
+tt0903747,31,1,Breaking Bad,2008,2008,https://imdb-api.com/images/original/MV5BOThjODMyM2QtNTNhYi00ZGM4LWIxZTAtMDAyYWNhYzYxMjJiXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.7313_AL_.jpg,9.4,1673727.0,1673727
+tt0413573,32,4,Grey's Anatomy,2005,2005,https://imdb-api.com/images/original/MV5BODA2Mjk0N2MtNGY0Mi00ZWFjLTkxODEtZDFjNDg4ZDliMGVmXkEyXkFqcGdeQXVyMzAzNTY3MDM@._V1_Ratio0.6716_AL_.jpg,7.5,288434.0,288434
+tt7661046,33,59,Dollface,2019,2019,https://imdb-api.com/images/original/MV5BMWM3ZmQ0MmYtZGJhYy00YTZkLWE4ZTctMDRjZGNlYTBmM2QwXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_Ratio0.6716_AL_.jpg,7.4,7725.0,7725
+tt5180504,34,-4,The Witcher,2019,2019,https://imdb-api.com/images/original/MV5BN2FiOWU4YzYtMzZiOS00MzcyLTlkOGEtOTgwZmEwMzAxMzA3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6716_AL_.jpg,8.2,455155.0,455155
+tt11041332,35,-9,Yellowjackets,2021,2021,https://imdb-api.com/images/original/MV5BZDM1NzA2OWItMWEzNC00Yzc2LWIxMmUtOWY0ZWJhMzEwNWYxXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_Ratio0.6716_AL_.jpg,8.0,30670.0,30670
+tt6048596,36,-8,The Sinner,2017,2017,https://imdb-api.com/images/original/MV5BMjBkZDhkNzUtNDZhZS00ZDE1LWI1MjQtYjQ1OGM3Y2FiMmMwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio0.7910_AL_.jpg,7.9,114033.0,114033
+tt3032476,37,-2,Better Call Saul,2015,2015,https://imdb-api.com/images/original/MV5BMGE4YzY4NGEtOWYyYS00ZDk2LWExMmMtZDIyODhiMmNlMGE0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6716_AL_.jpg,8.8,381238.0,381238
+tt0141842,38,24,The Sopranos,1999,1999,https://imdb-api.com/images/original/MV5BZGJjYzhjYTYtMDBjYy00OWU1LTg5OTYtNmYwOTZmZjE3ZDdhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_Ratio0.7015_AL_.jpg,9.2,363397.0,363397
+tt5171438,39,19,Star Trek: Discovery,2017,2017,https://imdb-api.com/images/original/MV5BNjg1NTc2MDktZTU5Ni00OTZiLWIyNjQtN2FhNGY4MzAxNmZkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6716_AL_.jpg,7.1,113329.0,113329
+tt15264192,40,-27,Murderville,2022,2022,https://imdb-api.com/images/original/MV5BNzQ4MWI2ZWMtYWIyNi00ZDcxLWEzMzUtOTUyNjY2NTBlYWIzXkEyXkFqcGdeQXVyMTM2Mzg4MA@@._V1_Ratio0.7015_AL_.jpg,7.0,8023.0,8023
+tt0460681,41,5,Supernatural,2005,2005,https://imdb-api.com/images/original/MV5BNzRmZWJhNjUtY2ZkYy00N2MyLWJmNTktOTAwY2VkODVmOGY3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6716_AL_.jpg,8.4,423454.0,423454
+tt0364845,42,7,NCIS,2003,2003,https://imdb-api.com/images/original/MV5BYjVlMjZhYzYtOGQxNC00OTQxLTk2NzEtMWFmMmNhODA4YjYzXkEyXkFqcGdeQXVyNjQ3MDgwNjY@._V1_Ratio0.6716_AL_.jpg,7.7,137973.0,137973
+tt4270492,43,-1,Billions,2016,2016,https://imdb-api.com/images/original/MV5BNmE0M2M2ZTUtOGI0MC00Mjg3LWJjZDQtOTcyYmFhYWNhNmU5XkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_Ratio0.6716_AL_.jpg,8.4,88157.0,88157
+tt2306299,44,-5,Vikings,2013,2013,https://imdb-api.com/images/original/MV5BODk4ZjU0NDUtYjdlOS00OTljLTgwZTUtYjkyZjk1NzExZGIzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6716_AL_.jpg,8.5,495276.0,495276
+tt0452046,45,7,Criminal Minds,2005,2005,https://imdb-api.com/images/original/MV5BNGE2ZmFkZTYtNjRiOS00ZjE3LThjOWMtZTViZjRmNDFjNTQwXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_Ratio0.6716_AL_.jpg,8.1,185793.0,185793
+tt0472954,46,-3,It's Always Sunny in Philadelphia,2004,2004,https://imdb-api.com/images/original/MV5BMzg3ODVjZTYtZTAyNC00MzVjLTk3NmUtMGI4ZjZmNGQ1NmY4XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_Ratio0.6716_AL_.jpg,8.8,212776.0,212776
+tt10986410,47,4,Ted Lasso,2020,2020,https://imdb-api.com/images/original/MV5BMDVmODUzNmEtMGMxZC00NWUzLTkxMTAtMDM5OTQzMWE0ZDM3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6716_AL_.jpg,8.8,167470.0,167470
+tt0098904,48,0,Seinfeld,1989,1989,https://imdb-api.com/images/original/MV5BZjZjMzQ2ZmUtZWEyZC00NWJiLWFjM2UtMzhmYzZmZDcxMzllXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_Ratio0.7015_AL_.jpg,8.8,295844.0,295844
+tt9612516,49,275,Space Force,2020,2020,https://imdb-api.com/images/original/MV5BOGI3ZjYyOTktOWEzOC00NzhjLWEwODYtMWFiZDU5ZGRkMDE3XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio0.7910_AL_.jpg,6.7,56608.0,56608
+tt5555260,50,-9,This Is Us,2016,2016,https://imdb-api.com/images/original/MV5BNzYxYWY3YzctZjRiNS00MTViLTk5OTYtZDEyNzAwNGE5ODY0XkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_Ratio0.6716_AL_.jpg,8.6,127426.0,127426
+tt8681148,51,48,This Is Going to Hurt,2022,2022,https://imdb-api.com/images/original/MV5BN2NmYTM1NzktNWFhYi00NDcxLWI4MDYtZDBjZDUwMmYwM2IzXkEyXkFqcGdeQXVyOTMyODgwOTQ@._V1_Ratio0.6716_AL_.jpg,8.6,3358.0,3358
+tt13365348,52,-21,Archive 81,2022,2022,https://imdb-api.com/images/original/MV5BZWRkYTU3MzktMjc4Mi00MTI0LWJmYWItYzhmMTRkZTcxMTVkXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_Ratio0.6716_AL_.jpg,7.4,35919.0,35919
+tt6156584,53,1,Snowpiercer,2020,2020,https://imdb-api.com/images/original/MV5BYTY1MDhjOWQtYWFkNS00ODA1LTg1YTUtZDhmZDE0MDJlMzIwXkEyXkFqcGdeQXVyMTI4MDc0NjU2._V1_Ratio0.6716_AL_.jpg,6.9,47742.0,47742
+tt3322312,54,27,Daredevil,2015,2015,https://imdb-api.com/images/original/MV5BODcwOTg2MDE3NF5BMl5BanBnXkFtZTgwNTUyNTY1NjM@._V1_Ratio0.6716_AL_.jpg,8.6,410294.0,410294
+tt14500082,55,-8,How I Met Your Father,2022,2022,https://imdb-api.com/images/original/MV5BYTg2Yzk2NGItM2NhZS00YjBhLThiYWUtYmY1ZTUzMTY2YTVjXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_Ratio0.6716_AL_.jpg,5.1,7729.0,7729
+tt0108778,56,1,Friends,1994,1994,https://imdb-api.com/images/original/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_Ratio0.6716_AL_.jpg,8.8,937402.0,937402
+tt8398600,57,-19,After Life,2019,2019,https://imdb-api.com/images/original/MV5BZjdjOWIxMDgtYTgwNS00MjE4LTliZWYtZGI1NDhhZmIyYjM1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6716_AL_.jpg,8.5,122550.0,122550
+tt12026710,58,-25,Suspicion,2022,2022,https://imdb-api.com/images/original/MV5BZmJlYmQzZDAtMDJiOS00ZWE0LWEzZjAtMGE0YmY4MDViMjI2XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6716_AL_.jpg,6.7,1759.0,1759
+tt14507354,59,137,The Endgame,2022,2022,https://imdb-api.com/images/original/MV5BM2U1NGQ1ZmYtNThjOS00NWEwLWEwMDktMWM2NTgyZjJkNDQ3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6716_AL_.jpg,6.3,954.0,954
+tt8690918,60,4,Resident Alien,2021,2021,https://imdb-api.com/images/original/MV5BMTQzODE1MzYtMTM5Mi00YWM1LTgwZTctNTEzMWI2ZGQ3NWM1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6716_AL_.jpg,8.2,32055.0,32055
+tt0098844,61,80,Law & Order,1990,1990,https://imdb-api.com/images/original/MV5BY2NmMjJhYWEtNzIyYy00MmVmLWFmMDgtNDZjNWUyYjRjOGRhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio0.7313_AL_.jpg,7.7,35830.0,35830
+tt0898266,62,-1,The Big Bang Theory,2007,2007,https://imdb-api.com/images/original/MV5BY2FmZTY5YTktOWRlYy00NmIyLWE0ZmQtZDg2YjlmMzczZDZiXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_Ratio0.6716_AL_.jpg,8.1,774255.0,774255
+tt4179452,63,17,The Last Kingdom,2015,2015,https://imdb-api.com/images/original/MV5BMjE1MzYzNjk3OF5BMl5BanBnXkFtZTgwMzk0MzYwNzE@._V1_Ratio0.6716_AL_.jpg,8.4,107496.0,107496
+tt1190634,64,8,The Boys,2019,2019,https://imdb-api.com/images/original/MV5BNGEyOGJiNWEtMTgwMi00ODU4LTlkMjItZWI4NjFmMzgxZGY2XkEyXkFqcGdeQXVyNjcyNjcyMzQ@._V1_Ratio0.6716_AL_.jpg,8.7,347697.0,347697
+tt2467372,65,-10,Brooklyn Nine-Nine,2013,2013,https://imdb-api.com/images/original/MV5BNzVkYWY4NzYtMWFlZi00YzkwLThhZDItZjcxYTU4ZTMzMDZmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_Ratio0.6716_AL_.jpg,8.4,285635.0,285635
+tt11126994,66,-7,Arcane,2021,2021,https://imdb-api.com/images/original/MV5BYmU5OWM5ZTAtNjUzOC00NmUyLTgyOWMtMjlkNjdlMDAzMzU1XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6716_AL_.jpg,9.1,159676.0,159676
+tt2741602,67,1,The Blacklist,2013,2013,https://imdb-api.com/images/original/MV5BNDFkZDI5ZGUtYTdkOC00YTFiLWJjNjMtNTQ3ZjIxMTY2ZjMyXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_Ratio0.6716_AL_.jpg,8.0,233129.0,233129
+tt3006802,68,7,Outlander,2014,2014,https://imdb-api.com/images/original/MV5BNTY0MGQyMTYtNDNmNy00ZWRjLTg3YzItNWNjZDc3N2RkMGMyXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_Ratio0.6716_AL_.jpg,8.4,146137.0,146137
+tt1606375,69,8,Downton Abbey,2010,2010,https://imdb-api.com/images/original/MV5BY2U1NmIwYzgtNjFkOS00YWUxLTg0YTMtZmE5NTA3YjRmY2NlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_Ratio0.7015_AL_.jpg,8.7,193040.0,193040
+tt7221388,70,-20,Cobra Kai,2018,2018,https://imdb-api.com/images/original/MV5BY2NmNzEzN2QtMTBhOC00OGY1LThkMGMtZTIwMTE3MmUyNDc1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.7910_AL_.jpg,8.6,160021.0,160021
+tt1219024,71,-5,Castle,2009,2009,https://imdb-api.com/images/original/MV5BMjM2NjU0ODU0NF5BMl5BanBnXkFtZTgwMDAwMzg5NjE@._V1_Ratio0.6716_AL_.jpg,8.1,156352.0,156352
+tt0121955,72,-3,South Park,1997,1997,https://imdb-api.com/images/original/MV5BOGE2YWUzMDItNTg2Ny00NTUzLTlmZGYtNWMyNzVjMjQ3MThkXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_Ratio0.6716_AL_.jpg,8.7,355018.0,355018
+tt14637290,73,18,The Privilege,2022,2022,https://imdb-api.com/images/original/MV5BZTczYjNiNDYtMzU3MS00MTljLWFhOGYtOWM0YTAwNWQ2N2I1XkEyXkFqcGdeQXVyMTAzOTQ3MjY1._V1_Ratio0.7313_AL_.jpg,4.6,2840.0,2840
+tt8740790,74,83,Bridgerton,2020,2020,https://imdb-api.com/images/original/MV5BYTU1Yjc0NmQtOWVkMy00MWI2LWE3ZDktYmM3ZjQyZWNlNzY5XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio0.6716_AL_.jpg,7.3,98806.0,98806
+tt3230854,75,-12,The Expanse,2015,2015,https://imdb-api.com/images/original/MV5BZDVmMDljM2QtZDkzZC00ZDg2LWFiMGItZjNiNjliZjg2MGEzXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.6716_AL_.jpg,8.5,142853.0,142853
+tt2177461,76,7,A Discovery of Witches,2018,2018,https://imdb-api.com/images/original/MV5BNDQ1MDc2MjYtZjBhMi00ZjRlLWE5NDctMTVjNzNjMDc5ZGNmXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_Ratio0.7015_AL_.jpg,8.0,48666.0,48666
+tt11761194,77,-24,Power Book IV: Force,2022,2022,https://imdb-api.com/images/original/MV5BZWFmZGY3YjktMWVmZS00ZmNiLTg3MmYtYmRmZDRhMzdhYjY4XkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_Ratio0.6716_AL_.jpg,8.3,1606.0,1606
+tt0203259,78,6,Law & Order: Special Victims Unit,1999,1999,https://imdb-api.com/images/original/MV5BYmNkN2RlMzktMDgzNi00OWRmLWI3N2ItYzU5ZGUyMzc3MjJhXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_Ratio0.6716_AL_.jpg,8.0,98208.0,98208
+tt5363918,79,25,Disenchantment,2018,2018,https://imdb-api.com/images/original/MV5BMzlkYzk0YzItM2I0ZC00NmE5LTljMGYtNTY2ZTVhMzA5OWJjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6716_AL_.jpg,7.2,56702.0,56702
+tt0773262,80,-7,Dexter,2006,2006,https://imdb-api.com/images/original/MV5BZjkzMmU5MjMtODllZS00OTA5LTk2ZTEtNjdhYjZhMDA5ZTRhXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_Ratio0.7313_AL_.jpg,8.6,706674.0,706674
+tt12614214,81,-36,The Afterparty,2022,2022,https://imdb-api.com/images/original/MV5BNmZhMTFkN2MtMTg0OS00NGQ4LWI5ZmYtMjZhYzVhMWE1ZjRkXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6716_AL_.jpg,7.1,3484.0,3484
+tt2261391,82,4,Chicago Fire,2012,2012,https://imdb-api.com/images/original/MV5BMjEyMWY5ZjMtNGQ5Mi00YTMxLWIwMjYtNDAyZmQ3YmI3ZTg4XkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_Ratio0.6716_AL_.jpg,8.0,53059.0,53059
+tt7826108,83,-46,Raising Dion,2019,2019,https://imdb-api.com/images/original/MV5BZTgyYjZjMzktNjk1OC00ZDdmLThmODEtNzUxMzcyY2Y1YzBmXkEyXkFqcGdeQXVyMjMzNTEyMzk@._V1_Ratio0.6716_AL_.jpg,7.2,13337.0,13337
+tt7462410,84,1,The Wheel of Time,2021,2021,https://imdb-api.com/images/original/MV5BYzA2Nzk5M2EtNWY4Yi00ZDY4LThkZTgtYjhhNWEyMGY0MjFjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6716_AL_.jpg,7.2,88632.0,88632
+tt11859542,85,-51,In from the Cold,2022,2022,https://imdb-api.com/images/original/MV5BZWNiYjllNjgtY2VlOC00NDM4LTk4YzQtNGU1Zjk4NDUzN2Q4XkEyXkFqcGdeQXVyMTA2ODkwNzM5._V1_Ratio0.7015_AL_.jpg,6.2,5475.0,5475
+tt2085059,86,11,Black Mirror,2011,2011,https://imdb-api.com/images/original/MV5BYTM3YWVhMDMtNjczMy00NGEyLWJhZDctYjNhMTRkNDE0ZTI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6716_AL_.jpg,8.8,506169.0,506169
+tt0436992,87,8,Doctor Who,2005,2005,https://imdb-api.com/images/original/MV5BZWJhYjFmZDEtNTVlYy00NGExLWJhZWItNTAxODY5YTc3MDFmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.7015_AL_.jpg,8.6,216008.0,216008
+tt9359220,88,869,Young Wallander,2020,2020,https://imdb-api.com/images/original/MV5BYWI5ZTM4ZmMtMmE1ZC00NDkzLWI1ZjgtZTEwMDVhZTNhOGRkXkEyXkFqcGdeQXVyMTMzODk3NDU0._V1_Ratio0.6716_AL_.jpg,6.9,9393.0,9393
+tt2861424,89,-29,Rick and Morty,2013,2013,https://imdb-api.com/images/original/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_Ratio0.6716_AL_.jpg,9.2,462690.0,462690
+tt0118401,90,16,Midsomer Murders,1997,1997,https://imdb-api.com/images/original/MV5BMjA5MmM5NjEtYjY2Yy00MzVmLThkMTYtYzcxMGE5MGFjMDQ2XkEyXkFqcGdeQXVyNDQ3NDM5OQ@@._V1_Ratio0.8209_AL_.jpg,7.8,30827.0,30827
+tt10574236,91,-13,Station Eleven,2021,2021,https://imdb-api.com/images/original/MV5BZDBmZWUwZTctMTI5My00ZjFiLTgyOWEtMzJiOTZhNmRhYTZhXkEyXkFqcGdeQXVyMTA1OTAyOTI@._V1_Ratio0.6716_AL_.jpg,7.7,16850.0,16850
+tt8421350,92,-18,Manifest,2018,2018,https://imdb-api.com/images/original/MV5BMmM1OWIyODItZWNmMC00MzJmLThiNDktNjExMGFlMTcyYWI5XkEyXkFqcGdeQXVyMjYwNDA2MDE@._V1_Ratio0.7313_AL_.jpg,7.1,48490.0,48490
+tt11958610,93,8,Trigger Point,2022,2022,https://imdb-api.com/images/original/MV5BZTBmZWVkNjctZDEyYS00YmUwLTk5OTgtNTdmNTk2MzgzNGYzXkEyXkFqcGdeQXVyOTMyODgwOTQ@._V1_Ratio0.6716_AL_.jpg,5.8,1896.0,1896
+tt1967620,94,107,The Fear Index,2022,2022,https://imdb-api.com/images/original/MV5BMmJlNzRhNmYtZjk4MS00NzA4LWEwM2MtMjkzZDZkMWI4OGJiXkEyXkFqcGdeQXVyMTI0NjAzNDY4._V1_Ratio0.6716_AL_.jpg,5.9,638.0,638
+tt8466564,95,-51,Obi-Wan Kenobi,2022,2022,https://imdb-api.com/images/original/MV5BZDkyZTRhNzctOWM2Zi00YmQ2LTkwNzItMDg3ZGFmODgyZTIxXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg,0,0.0,0
+tt13868972,96,20,Rocket Boys,2022,2022,https://imdb-api.com/images/original/MV5BOTViZTI3MDItYzJjNi00ZTE0LWI0MTctY2FlMzY3MGI2ZTAyXkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_Ratio0.7612_AL_.jpg,9.2,7686.0,7686
+tt0460649,97,-3,How I Met Your Mother,2005,2005,https://imdb-api.com/images/original/MV5BNjg1MDQ5MjQ2N15BMl5BanBnXkFtZTYwNjI5NjA3._V1_Ratio0.7313_AL_.jpg,8.3,654894.0,654894
+tt1888075,98,-9,Death in Paradise,2011,2011,https://imdb-api.com/images/original/MV5BNWM3MDVjODktYzM2Mi00Yjg1LThiODktMzVkMDQ4N2ViZWFiXkEyXkFqcGdeQXVyMjExMjk0ODk@._V1_Ratio0.7015_AL_.jpg,7.8,19209.0,19209
+tt14412362,99,-43,Chloe,2022,2022,https://imdb-api.com/images/original/MV5BMTU4M2MyODQtNDA2YS00NmNkLWE2Y2UtMTYzY2I2MDE3YjMzXkEyXkFqcGdeQXVyNDYwNTk5NTE@._V1_Ratio1.7761_AL_.jpg,6.6,1125.0,1125
+tt1844624,100,3,American Horror Story,2011,2011,https://imdb-api.com/images/original/MV5BMWFhOGI5ZmQtNjA1My00NWExLTg1MDktYThkYWI3ZTc4ZDYzXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_Ratio0.6716_AL_.jpg,8.0,305116.0,305116

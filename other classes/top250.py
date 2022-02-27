@@ -17,12 +17,12 @@ def main():
     print(data)
 
     json_objects = json.dumps(data, indent=4)
-    with open('json/data.json', 'w') as outfile:
+    with open('../json/data.json', 'w') as outfile:
         outfile.write(json_objects)
 
 
 def toTextFile():
-    with open('json/data.json') as json_file:
+    with open('../json/data.json') as json_file:
         data = json.load(json_file)
 
         print(type[data])
@@ -34,7 +34,7 @@ def toTextFile():
         json_file.close()
 
 def jsonTOText():
-    df = pd.read_json(r'json/data.json')
+    df = pd.read_json(r'../json/data.json')
     df.to_csv (r'top250.txt', index=False)
 
 class topTVs:

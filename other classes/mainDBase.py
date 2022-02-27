@@ -1,17 +1,4 @@
-import sys
-import requests
-import responses
-import secrets
-import json
 import sqlite3
-from pathlib import Path
-from typing import Tuple
-import top250
-import searchTitle
-import userRatings
-
-
-
 
 
 def open_dbase(fileName: str) -> tuple[sqlite3.Connection, sqlite3.Cursor]:
