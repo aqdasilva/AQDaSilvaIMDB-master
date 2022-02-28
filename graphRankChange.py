@@ -33,7 +33,7 @@ class rankMovieGraph():
             x = []
             y = []
 
-            with open('most_popular_movies.csv', 'r') as csvfile:
+            with open('csv/most_popular_movies.csv', 'r') as csvfile:
                 plots = np.loadtxt(csvfile, delimiter=',', skiprows=1, usecols=range(1, 3))
 
                 for row in plots:
@@ -54,7 +54,7 @@ class rankShowGraph():
     x = []
     y = []
 
-    with open('most_popular_shows.csv', 'r') as csvfile:
+    with open('csv/most_popular_shows.csv', 'r') as csvfile:
         plots = np.loadtxt(csvfile, delimiter=',', skiprows=1, usecols=range(1, 3))
 
         for row in plots:

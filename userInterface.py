@@ -163,6 +163,8 @@ class Ui_MainWindow(object):
         self.df = pd.read_csv(self.filename, encoding='utf-8').fillna(0)
         self.Update(self.themes[0])  # lets 0th theme be the default : bmh
 
+
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "IMDB Data APi"))

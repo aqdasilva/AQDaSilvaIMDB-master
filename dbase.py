@@ -165,6 +165,9 @@ def read_from_db(db_cursor: sqlite3.Cursor):
     for row in data:
         print(row[0])
 
+def data_to_csv(db_cursor: sqlite3.Cursor):
+    db_cursor.execute("SELECT * FROM most_popular_movies")
+
 
 
 
