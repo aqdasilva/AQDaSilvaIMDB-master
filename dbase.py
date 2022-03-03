@@ -170,5 +170,20 @@ def data_to_csv(db_cursor: sqlite3.Cursor):
 
 
 
+def compare_shows(data_to_add: list[tuple], db_cursor: sqlite3.Cursor):
+    db_cursor.execute("""SELECT top_show_data.ttid, most_popular_shows.title
+                        FROM top_show_data
+                         INNER JOIN most_popular_shows ON top_show_data.ttid = most_popular_shows.ttid""", data_to_add)
+
+def compare_movies(data_to_add: list[tuple], db_cursor: sqlite3.Cursor):
+    db_cursor.execute("""SELECT most_popular_movies.ttid, top_movie_data.title
+                         FROM most_popular_movies
+                          INNER JOIN top_movie_data ON most_popular_movies.ttid = top_movie_data.ttid""", data_to_add)
+
+
+
+
+
+
 
 

@@ -1,15 +1,9 @@
 import matplotlib.pyplot as plt
 import np
-import matplotlib
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
-import matplotlib.animation as animation
-from matplotlib import style
 import tkinter as tk
 from tkinter import *
-
-from tkinter import ttk
-
 
 class Root(tk.Tk):
     def __init__(self):
@@ -33,7 +27,7 @@ class rankMovieGraph():
             x = []
             y = []
 
-            with open('csv/most_popular_movies.csv', 'r') as csvfile:
+            with open('csv/movies/most_popular_movies.csv', 'r') as csvfile:
                 plots = np.loadtxt(csvfile, delimiter=',', skiprows=1, usecols=range(1, 3))
 
                 for row in plots:
@@ -54,7 +48,7 @@ class rankShowGraph():
     x = []
     y = []
 
-    with open('csv/most_popular_shows.csv', 'r') as csvfile:
+    with open('csv/shows/most_popular_shows.csv', 'r') as csvfile:
         plots = np.loadtxt(csvfile, delimiter=',', skiprows=1, usecols=range(1, 3))
 
         for row in plots:

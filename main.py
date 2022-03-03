@@ -1,14 +1,7 @@
-import PySide6
-
 import api_grabs
 import dbase
 import sqlite3
-import SecondWindow
-import GUIWindow
 import sys
-from graphRankChange import rankMovieGraph,rankShowGraph
-import openpyxl
-import userInterface
 
 
 def report_results(data_to_write: list):
@@ -39,13 +32,6 @@ def get_data_and_put_in_db(db_cursor: sqlite3.Cursor):
     dbase.put_ratings_into_db(db_ready_ratings_data, db_cursor)
     dbase.put_ratings_into_db(big_mover_ratings, db_cursor)
 
-def GUI_data(data:list):
-    qt_app = PySide6.QtWidgets.QApplication(sys.argv)  # sys.argv is the list of command line arguments
-    my_window = GUIWindow.DataWindows(data)
-    sys.exit(qt_app.exec())
-
-def getAllRankChange()-> list[dict]:
-    open
 
 
 def main():
@@ -53,8 +39,7 @@ def main():
     dbase.create_all_tables(db_cursor)
     get_data_and_put_in_db(db_cursor)
     dbase.close_db(connection)
-    GUI_data(getAllRankChange())
-    userInterface()
+
 
 
 if __name__ == '__main__':

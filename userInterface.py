@@ -26,9 +26,7 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationTool
 from matplotlib.figure import Figure
 import seaborn as sns
 import pandas as pd
-import sip  # can be installed : pip install sip
-
-# We require a canvas class
+import sip
 import platform
 
 
@@ -77,6 +75,22 @@ class Ui_MainWindow(object):
         spacerItem = QtWidgets.QSpacerItem(60, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem)
         self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
+
+        self.pushButton4 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton4.setObjectName("pushButton4")
+        self.horizontalLayout.addWidget(self.pushButton4)
+        spacerItem = QtWidgets.QSpacerItem(60, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
+
+        self.pushButton5 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton5.setObjectName("pushButton5")
+        self.horizontalLayout.addWidget(self.pushButton5)
+        spacerItem = QtWidgets.QSpacerItem(60, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
+
+
 
 
         self.verticalLayout = QtWidgets.QVBoxLayout()
@@ -130,6 +144,7 @@ class Ui_MainWindow(object):
         self.pushButton2.clicked.connect(self.rankMovieGraph)
         self.pushButton3.clicked.connect(self.rankShowGraph)
 
+
         self.comboBox.currentIndexChanged['QString'].connect(self.Update)
         self.actionExit.triggered.connect(MainWindow.close)
         self.actionOpen_csv_file.triggered.connect(self.getFile)
@@ -169,17 +184,13 @@ class Ui_MainWindow(object):
         self.canv.draw()
 
     def getFile(self):
-        """ This function will get the address of the csv file location
-            also calls a readData function
-        """
+
         self.filename = QFileDialog.getOpenFileName(filter="csv (*.csv)")[0]
         print("File :", self.filename)
         self.readData()
 
     def readData(self):
-        """ This function will read the data using pandas and call the update
-            function to plot
-        """
+
         import os
         base_name = os.path.basename(self.filename)
         self.Title = os.path.splitext(base_name)[0]
@@ -200,7 +211,7 @@ class Ui_MainWindow(object):
         x = []
         y = []
 
-        with open('csv/most_popular_shows.csv', 'r') as csvfile:
+        with open('csv/shows/most_popular_shows.csv', 'r') as csvfile:
             plots = np.loadtxt(csvfile, delimiter=',', skiprows=1, usecols=range(1, 3))
 
             for row in plots:
@@ -220,7 +231,7 @@ class Ui_MainWindow(object):
         x = []
         y = []
 
-        with open('csv/most_popular_movies.csv', 'r') as csvfile:
+        with open('csv/movies/most_popular_movies.csv', 'r') as csvfile:
             plots = np.loadtxt(csvfile, delimiter=',', skiprows=1, usecols=range(1, 3))
 
             for row in plots:
@@ -243,6 +254,8 @@ class Ui_MainWindow(object):
         self.pushButton.setText(_translate("MainWindow", "Data Analysis"))
         self.pushButton2.setText(_translate("MainWindow", "Ranked Movies"))
         self.pushButton3.setText(_translate("MainWindow", "Ranked Shows"))
+        self.pushButton4.setText(_translate("MainWindow", "Popular Movies"))
+        self.pushButton5.setText(_translate("MainWindow", "Popular Shows"))
 
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.actionOpen_csv_file.setText(_translate("MainWindow", "Open csv file"))
@@ -259,4 +272,5 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
 
     MainWindow.show()
+
     sys.exit(app.exec_())
