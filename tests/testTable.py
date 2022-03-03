@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+
+import graphRankChange
 import userInterface
 
 def test_graphs():
@@ -8,3 +10,4 @@ def test_graphs():
 def test_show_graph():
     data_results = userInterface.rankShowGraphh()
     assert len(data_results) == 250
+

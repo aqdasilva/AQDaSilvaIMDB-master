@@ -21,7 +21,7 @@ from graphRankChange import rankMovieGraph
 
 matplotlib.use('Qt5Agg')
 from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtWidgets import QFileDialog
+from PyQt5.QtWidgets import QFileDialog, QListWidgetItem, QListWidget
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT as Navi
 from matplotlib.figure import Figure
 import seaborn as sns
@@ -54,6 +54,16 @@ class Ui_MainWindow(object):
         self.comboBox = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox.setObjectName("comboBox")
         self.horizontalLayout.addWidget(self.comboBox)
+
+       # display_list = QListWidget(self)
+       # self.list_control = display_list
+       # display_list.resize(400, 350)
+       # display_list.currentItemChanged.connect(self.demo_list_item_selected)
+
+       # self.put_TopShow_in_list(self.data)
+       # self.put_TopMovie_in_list(self.data)
+
+
 
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setObjectName("pushButton")
@@ -143,6 +153,8 @@ class Ui_MainWindow(object):
         self.pushButton.clicked.connect(self.getFile)
         self.pushButton2.clicked.connect(self.rankMovieGraph)
         self.pushButton3.clicked.connect(self.rankShowGraph)
+        self.pushButton4.clicked.connect(self.topMovieGraph)
+        self.pushButton5.clicked.connect(self.topShowGraph)
 
 
         self.comboBox.currentIndexChanged['QString'].connect(self.Update)
@@ -207,6 +219,15 @@ class Ui_MainWindow(object):
 
         canvas.get_tk_widget().pack(side=BOTTOM, fill=BOTH, expand=True)
 
+    def topToCanvasGUI(self):
+        f = Figure(figsize=(5, 5), dpi=100)
+        data = f.add_subplot(self.topShowGraph)
+        data.plot
+        canvas = FigureCanvasTkAgg(f, self)
+        canvas.draw()
+
+        canvas.get_tk_widget().pack(side=BOTTOM, fill=BOTH, expand=True)
+
     def rankShowGraph(self):
         x = []
         y = []
@@ -223,6 +244,26 @@ class Ui_MainWindow(object):
         plt.xlabel('Rank')
         plt.ylabel('Rank Change')
         plt.title('Show Changes', fontsize=20)
+
+        plt.legend()
+        plt.show()
+
+    def topShowGraph(self):
+        x = []
+        y = []
+
+        with open('csv/shows/top_show_data.csv', 'r') as csvfile:
+            plots = np.loadtxt(csvfile, delimiter=',', skiprows=1, usecols=range(1, 3))
+
+            for row in plots:
+                x.append(row[0])
+                y.append(int(row[1]))
+
+        plt.bar(x, y, color='g', width=0.50, label="Rank(+/-)")
+
+        plt.xlabel('Rank')
+        plt.ylabel('Title')
+        plt.title('Top Show', fontsize=20)
 
         plt.legend()
         plt.show()
@@ -247,6 +288,38 @@ class Ui_MainWindow(object):
         plt.legend()
         plt.show()
 
+    def topMovieGraph(self):
+        x = []
+        y = []
+
+        with open('csv/movies/top_movie_data.csv', 'r') as csvfile:
+            plots = np.loadtxt(csvfile, delimiter=',', skiprows=1, usecols=range(1, 3))
+
+            for row in plots:
+                x.append(row[0])
+                y.append(int(row[1]))
+
+        plt.bar(x, y, color='g', width=0.50, label="Rank(+/-)")
+
+        plt.xlabel('Rank')
+        plt.ylabel('Title')
+        plt.title('Top Movie', fontsize=20)
+
+        plt.legend()
+        plt.show()
+
+    def put_TopMovie_in_list(self, data: list[dict]):
+        with open('csv/movies/top_movie_data.csv', 'r') as list_item:
+            for item in data:
+                display_text = f"{item['state_name']}\t\t{item['median_income']}"
+                list_item = QListWidgetItem(display_text, listview=self.list_control)
+
+    def put_TopShow_in_list(self, data: list[dict]):
+        with open('csv/shows/top_show_data.csv', 'r') as list_item:
+            for item in data:
+                display_text = f"{item['state_name']}\t\t{item['median_income']}"
+                list_item = QListWidgetItem(display_text, listview=self.list_control)
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "IMDB Data APi"))
@@ -261,6 +334,13 @@ class Ui_MainWindow(object):
         self.actionOpen_csv_file.setText(_translate("MainWindow", "Open csv file"))
         self.actionExit.setText(_translate("MainWindow", "Exit"))
         self.import_data_button.setText(_translate("MainWindow", "import data"))
+
+    def demo_list_item_selected(self, current: QListWidgetItem, previous: QListWidgetItem):
+        selected_data = current.data(0)  # the data function has a 'role' choose 0 unless you extended QListWidgetItem
+        state_name = selected_data.split("\t")[0]  # split on tab and take the first resulting entry
+        full_record = self.find_full_data_record(state_name)
+        print(full_record)
+
 
 
 if __name__ == "__main__":
