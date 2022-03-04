@@ -141,12 +141,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.toolbar)
 
         self.themes = ['bmh', 'classic', 'dark_background', 'fast',
-                       'fivethirtyeight', 'ggplot', 'grayscale', 'seaborn-bright',
-                       'seaborn-colorblind', 'seaborn-dark-palette', 'seaborn-dark',
-                       'seaborn-darkgrid', 'seaborn-deep', 'seaborn-muted', 'seaborn-notebook',
-                       'seaborn-paper', 'seaborn-pastel', 'seaborn-poster', 'seaborn-talk',
-                       'seaborn-ticks', 'seaborn-white', 'seaborn-whitegrid', 'seaborn',
-                       'Solarize_Light2', 'tableau-colorblind10']
+                       'fivethirtyeight', 'ggplot', 'grayscale']
 
         self.comboBox.addItems(self.themes)
 
@@ -162,7 +157,7 @@ class Ui_MainWindow(object):
         self.actionOpen_csv_file.triggered.connect(self.getFile)
 
     def Update(self, value):
-        print("Value from Combo Box:", value)
+        print("Updated Values:", value)
         plt.clf()
         plt.style.use(value)
         try:
@@ -208,7 +203,7 @@ class Ui_MainWindow(object):
         self.Title = os.path.splitext(base_name)[0]
         print('FILE', self.Title)
         self.df = pd.read_csv(self.filename, encoding='utf-8').fillna(0)
-        self.Update(self.themes[0])  # lets 0th theme be the default : bmh
+        self.Update(self.themes[0])
 
     def graphToCanvasGUI(self):
         f = Figure(figsize=(5, 5), dpi=100)
@@ -336,8 +331,8 @@ class Ui_MainWindow(object):
         self.import_data_button.setText(_translate("MainWindow", "import data"))
 
     def demo_list_item_selected(self, current: QListWidgetItem, previous: QListWidgetItem):
-        selected_data = current.data(0)  # the data function has a 'role' choose 0 unless you extended QListWidgetItem
-        state_name = selected_data.split("\t")[0]  # split on tab and take the first resulting entry
+        selected_data = current.data(0)
+        state_name = selected_data.split("\t")[0]
         full_record = self.find_full_data_record(state_name)
         print(full_record)
 

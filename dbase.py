@@ -56,9 +56,7 @@ def create_most_pop_movie_table(cursor: sqlite3.Cursor):
 
 
 def create_top250movie_table(cursor: sqlite3.Cursor):
-    # if I was trying to be clever, I would use the same table for top250 movies and top250 tv and just use an extra
-    # field in the database to mark it as movie or TV, but since most of you who are looking for this are looking for
-    # a straightforward solution we'll do it this way.
+
     cursor.execute('''CREATE TABLE IF NOT EXISTS top_movie_data(
     ttid TEXT PRIMARY KEY,
     rank INTEGER DEFAULT 0,
@@ -126,7 +124,7 @@ def put_most_popular_in_database(table: str, data_to_add: list[tuple], db_cursor
 
 
 def put_in_wheel_of_time(db_cursor: sqlite3.Cursor):
-    """this is just a total kludge. I need a Wheel of time Entry for the foreign key to work, so I'm just adding it"""
+
     db_cursor.execute("""INSERT INTO top_show_data(ttid, rank, title, fulltitle, year, image_url, crew, imdb_rating, imdb_rating_count)
     VALUES('tt7462410',0,'The Wheel of Time','The Wheel of Time (TV Series 2021– )',2021,'','Rosamund Pike, Daniel Henney',
     7.2,85286)""")
